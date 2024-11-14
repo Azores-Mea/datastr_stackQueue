@@ -93,7 +93,19 @@ public class GroupACT_StackQueue {
 
                         switch (queueChoice) {
                             case 1: //ENQUEUE
-                                
+                                if ((rear + 1) % size == front) {
+                                    System.out.print("Queue is full, cannot add more elements.");
+                                }
+
+                                else {
+                                    System.out.print("Enter element to queue: ");
+                                    int value = user_input.nextInt();
+                                        if (front == -1) front = 0;
+                                        rear = (rear + 1) % size;
+                                        array[rear] = value;
+                                            System.out.println("Enqueued: " + value);
+                                            display (array, front, rear, size);
+                                }
                                 break;
                             case 2: //DEQUEUE
                               if (front == -1){
