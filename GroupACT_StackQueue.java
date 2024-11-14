@@ -112,16 +112,12 @@ public class GroupACT_StackQueue {
                                 System.out.println("Queue is empty.");
                             } else {
                                 System.out.println("Dequeueing the first element: " + array[front]);
-                        
-                                
                                 if (front == rear) { 
-                                    
                                     front = -1;
                                     rear = -1;
                                 } else {
                                     front = (front + 1) % size; 
                                 }
-                                
                                 display(array, front, rear, size);
                             }
                             break;
