@@ -61,7 +61,7 @@ public class GroupACT_StackQueue {
                             case 6: //EXIT | RETURN TO MAIN
                                 break;
                             default:
-                                System.out.println("Invalid Input");
+                                System.out.println("Invalid Input.");
                         }
                         if (stackChoice == 6) break;
                     }
