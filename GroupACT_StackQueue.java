@@ -39,7 +39,17 @@ public class GroupACT_StackQueue {
                                 }
                                 break;
                             case 2: //POP
-                                
+                               if (front == -1) {
+                                    System.out.println("Stack underflow. Cannot pop.");
+                                } else {
+                                    System.out.println("Popped: " + array[rear]);
+                                    if (front == rear) {
+                                        front = rear = -1;
+                                    } else {
+                                        rear = (rear - 1 + size) % size;
+                                    }
+                                    displayElements(array, front, rear, size);
+                                }
                                 break;
                                 
                             case 3: //PEEK
