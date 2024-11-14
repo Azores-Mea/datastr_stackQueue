@@ -41,9 +41,16 @@ public class GroupACT_StackQueue {
                             case 2: //POP
                                 
                                 break;
-                            case 3: //PEEK
                                 
+                            case 3: //PEEK
+                                    if (front == -1) {
+                                    System.out.println("Stack is empty. Nothing to peek.");
+                                } else {
+                                    System.out.println("Top element: " + array[rear]);
+                                    display(array, front, rear, size);
+                                }
                                 break;
+                                
                             case 4: //IsFull
                                 if ((rear + 1) % size == front) {
                                     System.out.println("Stack is full");
