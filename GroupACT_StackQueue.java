@@ -107,33 +107,25 @@ public class GroupACT_StackQueue {
                                             display (array, front, rear, size);
                                 }
                                 break;
-                            case 2: //DEQUEUE
-                              if (front == -1){
-                              System.out.println("Queue is empty.");
-                              }
-                              
-                              
-                              else {
-                              System.out.println("Dequeueing the first element: " + array[0]);
-
-                                   
-                                   for (int i = 1; i < array.length; i++) {
-                                       array[i - 1] = array[i];
-                                   }
-                           
-                                   
-                                   array[array.length - 1] = 0;
-                           
-                                    System.out.print("Elements: ");
-                                      for (int element : array) {
-                                          System.out.print(element + " ");
-                                      }
-                                      System.out.println();
-                                                             }
-
-                              
+                           case 2: // DEQUEUE
+                            if (front == -1) {
+                                System.out.println("Queue is empty.");
+                            } else {
+                                System.out.println("Dequeueing the first element: " + array[front]);
+                        
                                 
-                                break;
+                                if (front == rear) { 
+                                    
+                                    front = -1;
+                                    rear = -1;
+                                } else {
+                                    front = (front + 1) % size; 
+                                }
+                                
+                                display(array, front, rear, size);
+                            }
+                            break;
+
                             case 3: //PEEK
                                 if (front == -1) {
                                     System.out.println("Queue is empty.");
